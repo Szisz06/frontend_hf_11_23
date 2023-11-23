@@ -17,9 +17,17 @@ export default class SorView {
   htmlOsszerak() {
     let txt = "<tr>";
     for (const key in this.#obj) {
-      txt += `<td>${this.#obj[key]}</td>`;
+      if (key != "created_at") {
+        if (key != "updated_at") {
+          if (key == "price") {
+            txt += `<td>${this.#obj[key]} $</td>`;
+          } else {
+            txt += `<td>${this.#obj[key]}</td>`;
+          }
+        }
+      }
     }
-    txt += `<td><button class="torles"> Delete </button></td>`;
+    txt += `<td><button class="torles btn btn-danger"> Delete </button></td>`;
     txt += "</tr>";
     this.szuloElem.append(txt);
   }

@@ -10,7 +10,7 @@ export default class FejlecView {
     for (const key in this.#obj) {
       txt += `<th>${this.#obj[key]}</th>`;
     }
-
+    txt += `<th>Delete</th>`;
     txt += "</tr>";
     this.szuloElem.append(txt);
   }

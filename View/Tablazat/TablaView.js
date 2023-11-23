@@ -5,7 +5,7 @@ export default class TablaView {
   #list = [];
   constructor(list, szuloElem) {
     this.#list = list;
-    szuloElem.append(`<table class='table table-striped'>
+    szuloElem.append(`<table class='table table text-white'>
                                 <thead></thead>
                                 <tbody></tbody>
                             </table>`);
