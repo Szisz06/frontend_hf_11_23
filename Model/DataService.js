@@ -14,10 +14,13 @@ export default class DataService {
       .finally(function () {});
   }
 
-  postData(data) {
+  postData(data, callback) {
     axios
       .post("autos", data)
-      .then(function (response) {})
+      .then(function (response) {
+        callback(response.data);
+        console.log("sikeres");
+      })
       .catch(function (error) {
         console.log(error);
       })

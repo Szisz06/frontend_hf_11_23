@@ -2,7 +2,7 @@ import DataService from "../Model/DataService.js";
 import TablaView from "../View/Tablazat/TablaView.js";
 import UrlapView from "../View/Urlap/UrlapView.js";
 
-export default class Controller {
+export default class AdminController{
   constructor() {
     this.dataService = new DataService();
     this.dataService.getData("autos", this.megjelenit.bind(this));
@@ -10,7 +10,7 @@ export default class Controller {
       this.dataService.deleteData("autos", e.detail, this.ujratolt);
     });
     window.addEventListener("postSubmit", (e) => {
-      this.dataService.postData(e.detail);
+      this.dataService.postData(e.detail, this.ujratolt);
     });
   }
 

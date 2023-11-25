@@ -36,7 +36,7 @@ export default class UrlapView {
       }
     }
     this.submitButton = document.createElement("button");
-    this.submitButton.classList.add("btn", "btn-success", "kuld");
+    this.submitButton.classList.add("kuld");
     this.submitButton.textContent = "Submit";
     this.submitButton.addEventListener("click", (event) => {
       event.preventDefault();
@@ -53,7 +53,6 @@ export default class UrlapView {
     });
 
     this.formElem.appendChild(this.submitButton);
-
     this.szuloElem.appendChild(this.formElem);
   }
 }
